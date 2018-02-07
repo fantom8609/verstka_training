@@ -276,7 +276,7 @@ header .buttom {
 /*USLUGI*/ 
 .main_cats {
 	background-color: #191919;
-	padding: 40px 0px 40px 0px;
+	padding: 40px 0px 41px 0px;
 }
 .main_cats h2 {
 	color: #c9c9c9;
@@ -291,7 +291,8 @@ header .buttom {
 .main_cats h2 span {
 	color: #d12f22;
 }
-section h2 {
+section h2,
+article h2 {
 	position: relative;
 }
 .s_black h2::before {
@@ -316,11 +317,36 @@ section h2 {
 	background-position: 49px 0px;
 }
 
+article .art_header::before {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 21px;
+	background-image: url('/img/decore_1.png');
+	top: 17px;
+	margin-left: -70px;
+} 
+article .art_header::after {
+	content: "";
+	position: absolute;
+	width: 50px;
+	height: 21px;
+	background-image: url('/img/decore_1.png');
+	top: 17px;
+	margin-right: -70px;
+	margin-left: 20px;
+	background-position: 49px 0px;
+} 
+
+
+
+
 
 /*MENU USLUG*/
 .mc_item {
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 2px;
+	border-bottom: none;
 }
 
 
@@ -340,6 +366,7 @@ section h2 {
 .mc_wrap {
 	text-align: center;
 	padding: 0;
+	position: relative;
 }
 
 .mc_item span {
@@ -380,7 +407,7 @@ section h2 {
 	font-size: 20px;
 	font-weight: normal;
 	margin-top: 12px;
-	margin-bottom: 10px;
+	margin-bottom: 6px;
 }
 
 .mc_item a:hover h4,
@@ -397,11 +424,11 @@ section h2 {
 	background-color: #212121;
 	height: 25px;
 	position: absolute;
-    cursor: pointer;
+	cursor: pointer;
 	position: relative;
 	background-image: url("/img/bottom_arrows.png");
 	background-repeat: no-repeat;
-    background-position: -118px 8px;
+	background-position: -118px 8px;
 }
 
 .mc_item_wrap.active .mc_toggle,
@@ -409,5 +436,169 @@ section h2 {
 	background-color: #353535;
 	background-position: 72px 8px;
 }
+
+.mc_item_wrap > ul {
+	position: absolute;
+	width: 100%;
+	list-style: none;
+	padding: 17px 0px;
+	margin: 0;
+	background-color: #353535;
+	margin-top: 22px;
+	display: none;
+	left: 0px;
+
+}
+
+.mc_item_wrap > ul >li {
+	display: inline-block;
+	font-family: "BebasBold";
+	font-weight: normal;
+	font-size: 20px;
+}
+.mc_item_wrap ul li a {
+	padding: 0px 7px;
+	text-decoration: underline;
+}
+
+.mc_item_wrap.active ul li a:hover {
+	text-decoration: underline;
+}
+
+.mc_item_wrap_after {
+	content: "";
+	width: 22px;
+	height: 22px;
+	background-image: url("/img/act.png");
+	position: absolute;
+	margin: 11px 68px;
+	display: none;
+}
+
+.mc_button_wrap {
+	text-align: center;
+}
+
+.mc_button_wrap .button {
+	margin-top: 39px;
+}
+
+
+
+
+
+.fix_for_button {
+	margin-top: 90px;
+}  
+
+
+
+
+
+/*ARTICLE*/
+
+article.content {
+	background-color: #e9e9e9;
+}
+
+article.content h2 {
+	font-family: "BebasRegular";
+	font-size: 40px;
+	color: #050505;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.h_desc {
+	color: #050505;
+	font-family: Roboto;
+	text-align: center;
+	min-width: 772px;
+	margin: auto;
+}
+.home_items {
+	background-color: #d5d5d5;
+	padding: 43px 76px 0px 76px;
+	margin-top: 35px;
+}
+.hi_item {
+	color: #050505;
+	text-align: center;
+	font-size: 13px;
+	margin-bottom: 60px;
+}
+.hi_item img {
+	max-width: 100%;
+	border-top: 8px solid #ac160a;
+	width: 330px;
+}
+.hi_item p {
+	padding: 0px 48px;
+
+}
+
+
+
+.s_bottom {
+    padding-top: 32px;
+}
+.sb_header.button_cont {
+	text-align: right;
+}
+
+.s_bottom p {
+	color: #050505;
+	font-family: "RobotoCondensedRegular";
+	font-size: 16px;
+	    font-weight: bold;
+	    margin-top: 0px;
+}
+.s_bottom h2 {
+	color: #050505;
+	font-family: "BebasRegular";
+	font-size: 36px;
+	margin: 0;
+}
+.s_bottom img {
+	min-width: 90%;
+    position: absolute;
+    bottom: 0px;
+}
+.sb_content  {
+	margin-top: 30px;
+}
+
+
+
+/*FOOTER*/ 
+footer {
+	background-color: #2a2a2a;
+	color: #fff;
+		padding: 28px 0px 35px;
+		font-family: "BebasBold";
+		font-size: 20px;
+}
+footer a {
+	color: #fff;
+	padding: 0px 10px;
+	text-decoration: underline;
+}
+footer a:hover {
+	text-decoration: none;
+}
+.bot_mnu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.bot_mnu li {
+	float: left;
+}
+
+.img_footer_cont {
+	text-align: right;
+}
+
 
 

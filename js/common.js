@@ -1,5 +1,45 @@
 $(document).ready(function() {
 
+
+	$(".mc_item_wrap ul").each(function() {
+
+		$(this).after("<div class='mc_item_wrap_after'></div>");
+	});
+
+
+
+
+	$(".mc_toggle").click(function() {
+
+		if($(this).parent().parent().children("ul").is(":visible")) {			
+
+			$(".mc_button_wrap").removeClass("fix_for_button");
+
+			$(this).parent().parent().children("ul").slideUp();
+			
+			$(".mc_item_wrap_after").hide();
+		}
+		else {
+			$(".mc_item_wrap").removeClass("active");
+
+			$(".mc_button_wrap").addClass("fix_for_button");
+
+			$(this).parent().parent().addClass("active");
+
+			$(".mc_item_wrap > ul").hide();
+
+			$(".mc_item_wrap_after").hide();
+
+			$(this).parent().parent().children("ul").show();
+
+
+
+			$(this).parent().parent().children(".mc_item_wrap_after").show(0);
+		}
+	});
+
+
+
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
@@ -18,7 +58,7 @@ $(document).ready(function() {
 	//equalheight - одинаковая высота колонок
 	//Пример списка элементов:
 	//var eqElement = ".cat_container > div, .home_news > div"
-	var eqElement = ".element"
+	var eqElement = ".hi_item, .sb_content > div"
 	$(window).load(function(){equalheight(eqElement);}).resize(function(){equalheight(eqElement);});
 
 	//Masked Input Plugin
@@ -140,13 +180,13 @@ $(document).ready(function() {
 		// 		return false;
 		// 	};
 		// });
-};
-$(document).ready(function() {
-	resizeWindow();
-});
-$(window).bind("resize", function() {
-	viewport.changed(function(){
+	};
+	$(document).ready(function() {
 		resizeWindow();
 	});
-});
+	$(window).bind("resize", function() {
+		viewport.changed(function(){
+			resizeWindow();
+		});
+	});
 })(jQuery, document, window, ResponsiveBootstrapToolkit);
